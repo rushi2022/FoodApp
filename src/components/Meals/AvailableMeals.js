@@ -12,7 +12,7 @@ const [isLoding,setIsLoding] = useState(true);
 const[httpError,setHttpError] = useState();
   useEffect(()=>{
     const fatchMeals= async ()=>{
-    const response = await fetch('https://react-82195-default-rtdb.firebaseio.com/meals.json');
+    const response = await fetch('https://react-82195-default-rtdb.firebaseio.com/meals');
 if(!response.ok){
   throw new Error('Faild to Fatch!');
 }
