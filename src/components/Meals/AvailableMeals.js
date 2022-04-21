@@ -12,7 +12,11 @@ const [isLoding,setIsLoding] = useState(true);
 const[httpError,setHttpError] = useState();
   useEffect(()=>{
     const fatchMeals= async ()=>{
-    const response = await fetch(process.env.REACT_APP_FEATCH_MEAL);
+    const response = await fetch(process.env.REACT_APP_FEATCH_MEAL, {
+  method: ‘GET’,
+  headers: {
+    ‘Content-Type’: ‘application/json’
+  });
 if(!response.ok){
   throw new Error('Faild to Fatch!');
 }
